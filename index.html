@@ -1,261 +1,289 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>The Secret to Growing Your Recurring Revenue</title>
-    <style media="all" type="text/css">
-        @media only screen and (max-width: 620px) {
-            .span-2,
-            .span-3 {
-                max-width: none !important;
-                width: 100% !important;
-            }
-            .span-2>table,
-            .span-3>table {
-                max-width: 100% !important;
-                width: 100% !important;
+	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+	<!--[if mso]>
+		<style>
+			* {
+				font-family: sans-serif !important;
+			}
+		</style>
+	<![endif]-->
+
+	<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+	<!--[if !mso]><!-->
+		<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+	<!--<![endif]-->
+
+	<!-- Web Font / @font-face : END -->
+
+	<!-- CSS Reset -->
+    <style>
+
+		/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+	        margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        *[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        /* What it does: A work-around for Gmail meddling in triggered links. */
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        .a6S {
+	        display: none !important;
+	        opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+	        display:none !important;
+	   	}
+
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        .button-link {
+            text-decoration: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+            .email-container {
+                min-width: 375px !important;
             }
         }
-        
-        @media only screen and (max-width: 620px) {
-            p,
-            ul,
-            ol,
-            td,
-            span,
-            a {
-                font-size: 16px !important;
-            }
-            .wrapper,
-            .article {
-                padding: 10px !important;
-            }
-            .content {
-                padding: 0 !important;
-            }
-            .container {
-                padding: 0 !important;
+
+    </style>
+    
+    <!-- Progressive Enhancements -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
                 width: 100% !important;
+                margin: auto !important;
             }
-            .header {
-                margin-bottom: 10px !important;
-            }
-            .main {
-                border-left-width: 0 !important;
-                border-radius: 0 !important;
-                border-right-width: 0 !important;
-            }
-            .img-responsive {
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid {
+                max-width: 100% !important;
                 height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
                 max-width: 100% !important;
-                width: auto !important;
+                direction: ltr !important;
             }
-        }
-        
-        @media all {
-            .ExternalClass {
-                width: 100%;
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
             }
-            .ExternalClass,
-            .ExternalClass p,
-            .ExternalClass span,
-            .ExternalClass font,
-            .ExternalClass td,
-            .ExternalClass div {
-                line-height: 100%;
+
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
             }
-            .apple-link a {
-                color: inherit !important;
-                font-family: inherit !important;
-                font-size: inherit !important;
-                font-weight: inherit !important;
-                line-height: inherit !important;
-                text-decoration: none !important;
+            table.center-on-narrow {
+                display: inline-block !important;
             }
+
+            /* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+				line-height: 22px !important;
+			}
+			
         }
-        
-        .social-sharing {
-            margin: 0 auto;
-            text-align: center;
-            width: auto
-        }
-        
-        .social-sharing-icon {
-            height: 38px;
-            margin: 0 2px
-        }
-        
-        .social-sharing-url {
-            margin: 0 auto 20px;
-            width: 100%
-        }
-        
-        .social-sharing-url td {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px dashed #fff;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 600;
-            padding: 10px;
-            text-align: center
-        }
-        
-        .social-sharing-url-container {
-            width: 300px
-        }
+
     </style>
 
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. --> 
     <!--[if gte mso 9]>
     <xml>
- <o:OfficeDocumentSettings>
-  <o:AllowPNG/>
-  <o:PixelsPerInch>96</o:PixelsPerInch>
- </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    
 </head>
+<body width="100%" bgcolor="#F4EEEA" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #F4EEEA;" >
+    <center style="width: 100%; background: #F4EEEA; text-align: left;">
 
-<body class="" style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #F4EEEA; margin: 0; padding: 0;">
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
+            Preview Text
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
 
-    <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #F4EEEA;" width="100%" bgcolor="#F4EEEA">
-        <tr>
-            <td style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
-            <td class="container" style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top; Margin: 0 auto !important; max-width:600px; padding: 0px; width:600px;" width="600" valign="top">
+        <!-- Email Header : BEGIN -->
+        <table role="presentation" aria-hidden="true" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+			<tr>
+				<td style="padding: 20px 0; text-align: center">
+					<a href="https://www.becausejulia.com/" target="_blank" style="color: #E7772E; text-decoration: underline;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/logo.png" width="323" height="31" alt="Company Logo" align="center" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%;height:auto;"></a>
+				</td>
+			</tr>
+        </table>
+        <!-- Email Header : END -->
 
+        <!-- Email Body : BEGIN -->
+        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
 
-                <!-- START EMAIL CONTAINER -->
+            <!-- Hero Image, Flush : BEGIN -->
+            <tr>
+                    <td style="color:#E7772E; font-size:25px;margin-bottom:10px; text-align:center; font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; background-color: #ffffff;">
+                        <img src="https://ninjulia.github.io/email_cerberusTemplate/img/header.png" alt="Lorem ipsum dolor sit amet" class="img-responsive g-img" />
+                    </td>
+            </tr>
+            <!-- Hero Image, Flush : END -->
 
+            <!-- BODY TEXT : BEGIN -->
+            <tr>
+                <td style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top; padding:20px; background-color: #ffffff;" valign="top">
+                    <p style="margin-bottom:10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorum.</p>
 
-                <!-- START LOGO HEADER -->
-                <div class="header" style="margin-bottom: 20px; Margin-top: 10px; width: 100%;">
-                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; min-width: 100%;" width="100%">
-                        <tr>
-                            <td class="align-center" style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top; text-align: center;" valign="top" align="center">
-                                <a href="https://www.becausejulia.com/" target="_blank" style="color: #E7772E; text-decoration: underline;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/logo.png" width="323" height="31" alt="Company Logo" align="center" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%;height:auto;"></a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                    <p style="color:#E7772E; font-size:25px;margin-bottom:10px;">Lorem ipsum dolor sit</p>
 
-                <!-- END LOGO HEADER -->
-                <table border="0" cellpadding="0" cellspacing="0" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;" width="100%">
+                    <p style="margin-bottom:10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quos id laborum ipsa libero inventore impedit eum fuga nisi harum numquam repellendus suscipit asperiores consectetur provident architecto eveniet, sed hic.</p>
 
-                    <!-- START HEADER BANNER -->
+                    <p style="margin-bottom:10px;color:#E7772E;font-size:18px">Lorem ipsum dolor sit amet</p>
+
+                    <p style="margin-bottom:10px;">Iste, nesciunt fuga magni quis obcaecati nostrum:</p>
+                    <p style="margin-top:0px;margin-bottom:0px;">- Lorem, ipsum dolor </p>
+                    <p style="margin-top:0px;margin-bottom:0px;">- Amet consectetur</p>
+                    <p style="margin-top:0px;margin-bottom:0px;;">- Consectetur adipisicing elit folores, maiores</p>
+
+                    <p style="margin-bottom:10px;">Veritatis illo dolore sapiente, voluptatem enim delectus vel nemo amet, <a href="https://vimeo.com/">watch this short video.</a>
+                    </p>
+
+                </td>
+            </tr>
+            <!-- BODY TEXT : END -->
+            <!-- START FOOTER -->
+
                     <tr>
-                        <td style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top;" valign="top">
-                            <table border="0" cellpadding="0" cellspacing="0" class="alert alert-danger" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; min-width: 100%;" width="100%">
-                                <tr>
-                                    <td style="color:#E7772E; font-size:25px;margin-bottom:10px; text-align:center; font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif">
-                                        <img src="https://ninjulia.github.io/email_cerberusTemplate/img/header.png" alt="Lorem ipsum dolor sit amet" class="img-responsive" />
+                        <td style="vertical-align: top;" valign="top" align="center">
 
+                            <img src="https://ninjulia.github.io/email_cerberusTemplate/img/footer-bar.png" width="600" alt="" class="img-responsive img-block" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; display: block;">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
+                            <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">Company Name, Inc.<br/>12345 Main Street | Suite 101 | Anytown, US 55555</span><br/><a href="https://www.becausejulia.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
+                            <table class="social-sharing" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto; Margin: 0 auto; text-align: center;" align="center"  role="presentation" >
+                                <tr>
+                                    <td style="font-family: sans-serif; vertical-align: top; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
+                                        Follow us for updates.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-family: sans-serif; vertical-align: top; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
+                                        <a href="https://www.facebook.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/facebook.png" alt="Like us on Facebook" width="38" class="social-sharing-icon" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; height: 38px; Margin: 0 2px;"></a>&nbsp;
+                                        <a href="https://twitter.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/twitter.png" alt="Follow us on Twitter" width="38" class="social-sharing-icon" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; height: 38px; Margin: 0 2px;"></a>&nbsp;
+                                        <a href="https://www.linkedin.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/linkedin.png" alt="Follow us on LinkedIn" width="38" class="social-sharing-icon" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; height: 38px; Margin: 0 2px;"></a>&nbsp;
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
-
-                    <!-- END HEADER BANNER -->
-                    <!-- START CONTENT -->
                     <tr>
-                        <td class="wrapper" style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 0px 20px 20px;" valign="top">
-                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                                <tr>
-                                    <td style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top;" valign="top">
-                                        <p style="margin-bottom:10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorum.</p>
-
-                                        <p style="color:#E7772E; font-size:25px;margin-bottom:10px;">Lorem ipsum dolor sit</p>
-
-                                        <p style="margin-bottom:10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quos id laborum ipsa libero inventore impedit eum fuga nisi harum numquam repellendus suscipit asperiores consectetur provident architecto eveniet, sed hic.</p>
-
-                                        <p style="margin-bottom:10px;color:#E7772E;font-size:18px">Lorem ipsum dolor sit amet</p>
-
-                                        <p style="margin-bottom:10px;">Iste, nesciunt fuga magni quis obcaecati nostrum:</p>
-                                        <p style="margin-top:0px;margin-bottom:0px;">- Lorem, ipsum dolor </p>
-                                        <p style="margin-top:0px;margin-bottom:0px;">- Amet consectetur</p>
-                                        <p style="margin-top:0px;margin-bottom:0px;;">- Consectetur adipisicing elit folores, maiores</p>
-
-                                        <p style="margin-bottom:10px;">Veritatis illo dolore sapiente, voluptatem enim delectus vel nemo amet, <a href="https://vimeo.com/">watch this short video.</a>
-                                        </p>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                                            <tr>
-                                                <td style="vertical-align: top;" valign="top" align="center">
-                                                    <a href="https://vimeo.com/" style="border:none;">
-                                                        <img src="https://ninjulia.github.io/email_cerberusTemplate/img/video-screenshot.jpg" width="546" alt="" class="img-responsive img-block" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; display: block;">
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
+                            Email built using Ted Goas' <a href="https://tedgoas.github.io/Cerberus/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Cerberus framework.</a> Design and code edits by Julia Czarnecki. Any and all copyrighted material is property of the copyright owners. Placeholder logo image provided by <a href="https://placeholder.com/logos/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;" target="_blank">placeholder.com</a> and used under Creative Commons licencing <a href="https://creativecommons.org/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;" target="_blank">creativecommons.org</a>
                         </td>
-                    </tr>
+                    </tr>                    
 
+            <!-- END FOOTER -->
 
+        </table>
+        <!-- Email Body : END -->
 
-
-                    <!-- END MAIN CONTENT AREA -->
-                </table>
-
-                <!-- START FOOTER -->
-                <div class="footer" style="clear: both; padding-top: 0px; text-align: center; width: 100%;">
-                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                        <tr>
-                            <td style="vertical-align: top;" valign="top" align="center">
-
-                                <img src="https://ninjulia.github.io/email_cerberusTemplate/img/footer-bar.png" width="600" alt="" class="img-responsive img-block" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; display: block;">
-
-                            </td>
-                        </tr>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                        <tr>
-                            <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
-                                <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">Company Name, Inc.<br/>
-12345 Main Street | Suite 101 | Anytown, US 55555</span>
-                                <br/><a href="https://www.becausejulia.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
-                                <table class="social-sharing" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto; Margin: 0 auto; text-align: center;" align="center">
-                                    <tr>
-                                        <td style="font-family: sans-serif; vertical-align: top; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
-                                            Follow us for updates.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="font-family: sans-serif; vertical-align: top; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
-                                            <a href="https://www.facebook.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/facebook.png" alt="Like us on Facebook" width="38" class="social-sharing-icon" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; height: 38px; Margin: 0 2px;"></a>&nbsp;
-                                            <a href="https://twitter.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/twitter.png" alt="Follow us on Twitter" width="38" class="social-sharing-icon" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; height: 38px; Margin: 0 2px;"></a>&nbsp;
-                                            <a href="https://www.linkedin.com/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;"><img src="https://ninjulia.github.io/email_cerberusTemplate/img/linkedin.png" alt="Follow us on LinkedIn" width="38" class="social-sharing-icon" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; height: 38px; Margin: 0 2px;"></a>&nbsp;
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-top: 10px; padding-bottom: 10px; font-size: 12px; color: #999999; text-align: center;" valign="top" align="center">
-                                            Email built using Ted Goas' <a href="https://tedgoas.github.io/Cerberus/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Cerberus framework.</a> Design and code edits by Julia Czarnecki. Any and all copyrighted material is property of the copyright owners. Placeholder logo image provided by <a href="https://placeholder.com/logos/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;" target="_blank">placeholder.com</a> and used under Creative Commons licencing <a href="https://creativecommons.org/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;" target="_blank">creativecommons.org</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
-                <!-- END FOOTER -->
-
-                <!-- END EMAIL CONTAINER -->
-            </td>
-            <td style="font-family:'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
-        </tr>
-    </table>
+    </center>
 </body>
-
 </html>
